@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+.menu{
+    height:20vh;
+    width: 50vh;
+
+    margin: 2.5vh;
+    background: gainsboro;
+}
+
+.main{
+    height: auto;
+    width: auto;
+
+    margin: 0 0 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* Table Style */
+html {
+    font-family: sans-serif;
+}
+
+table {
+    position: relative;
+    width: 210vh;
+    height: 100%;
+
+    margin-right: 10vh;
+    
+    table-layout: fixed; 
+    border-collapse: collapse;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td, th {
+    word-wrap: break-word; /* Перенос слов на следующую строку */
+    word-break: break-word; /* Перенос длинных слов */
+    white-space: normal; /* Разрешить переносы строк */
+    width: 100px; /* Пример фиксированной ширины ячейки */
+    height: 50px; /* Пример фиксированной высоты ячейки */
+    border: 1px solid rgb(190, 190, 190); /* Границы ячеек */
+    box-sizing: border-box; 
+}
+
+tr{
+    width: 100%;
+    height: 10%;
+}
+
+th {
+    background-color: rgb(235,235,235);
+}
+
+td {
+    text-align: center;
+}
+
+td .box{
+    background: rgb(169,193,217);
+    background: linear-gradient(0deg, rgba(169,193,217,1) 0%, rgba(255,255,255,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.time{
+    position: relative;
+    border: none;
+    margin-left: -100px;
+}
+
+.time::before{
+    content: "";
+    position: absolute;
+    bottom: -0.5px;
+    right: 0;
+    width: 15px; 
+    height: 0.5px; 
+    background: rgb(190,190,190);
+}
+
+.time p{
+    font-size:1em;
+    position: absolute;
+    top: -1vh;
+    right: 2vh;
+}
+
+.time-column, .time {
+    width: 10vh; 
+}
+
+.none{
+    border: none;
+}
+
+.time.none::before{
+    display: none;
+}
+  /* Table Style */
