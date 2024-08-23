@@ -45,6 +45,14 @@ body{
     gap: 5px;
 }
 
+.menu .body button{
+    margin-top: 5px;
+}
+
+#name{
+    padding: 5px;
+}
+
 .menu .body .time-box{
     display: flex;
     align-items: center;
@@ -122,6 +130,13 @@ td .box{
     
     box-sizing: border-box;
     padding: 10px;
+    cursor: pointer;
+}
+
+td .box:hover{
+    background: rgb(170,49,49);
+    background: linear-gradient(0deg, rgba(170,49,49,1) 0%, rgba(215,223,228,1) 100%);
+    color: white;
 }
 
 .time{

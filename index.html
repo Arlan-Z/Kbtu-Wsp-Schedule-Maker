@@ -13,25 +13,72 @@
             Create Discipline
         </div>
         <div class="body">
-            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name" id="name">
             <div class="time-box">
                 <div class="time-in">
                     <p>Start</p>
-                    <input type="time" id="start">
+                    <select id="start">
+                        <option value="0">08:00</option>
+                        <option value="1">09:00</option>
+                        <option value="2">10:00</option>
+                        <option value="3">11:00</option>
+                        <option value="4">12:00</option>
+                        <option value="5">13:00</option>
+                        <option value="6">14:00</option>
+                        <option value="7">15:00</option>
+                        <option value="8">16:00</option>
+                        <option value="9">17:00</option>
+                        <option value="10">18:00</option>
+                        <option value="11">19:00</option>
+                        <option value="12">20:00</option>
+                        <option value="13">21:00</option>
+                        <option value="14">22:00</option>
+                        <option value="15">23:00</option>
+                    </select>
+                </div>
+
+                <div class="time-in">
+                    <p>Day</p>
+                    <select id="days">
+                        <option value="1">Monday</option>
+                        <option value="2">Tuesday</option>
+                        <option value="3">Wednesday</option>
+                        <option value="4">Thursday</option>
+                        <option value="5">Friday</option>
+                        <option value="6">Saturday</option>
+                        <option value="7">Sunday</option>
+                    </select>
                 </div>
 
                 <div class="time-in">
                     <p>End</p>
-                    <input type="time" id="End" step="3600">
+                    <select id="end">
+                        <option value="0">08:00</option>
+                        <option value="1">09:00</option>
+                        <option value="2">10:00</option>
+                        <option value="3">11:00</option>
+                        <option value="4">12:00</option>
+                        <option value="5">13:00</option>
+                        <option value="6">14:00</option>
+                        <option value="7">15:00</option>
+                        <option value="8">16:00</option>
+                        <option value="9">17:00</option>
+                        <option value="10">18:00</option>
+                        <option value="11">19:00</option>
+                        <option value="12">20:00</option>
+                        <option value="13">21:00</option>
+                        <option value="14">22:00</option>
+                        <option value="15">23:00</option>
+                    </select>
                 </div>
             </div>
 
-            <button id="submit">Create</button>
+            <button onclick="createDis()">Create</button>
         </div>
      </div>
 
      <div class="main">
-        <table>
+        <table id="schedule">
             <tr>
                 <td class="time"></td>
                 <th>Пн</th>
@@ -45,7 +92,7 @@
 
             <tr class="hours">
                 <td class="time"><p>08:00</p></td>
-                <td><div class="box">sajdasldjasdlkj</div></td>
+                <td><div class="box" onclick="destroyDis(event)">Hello</div></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -202,5 +249,6 @@
             </tr>
         </table>
      </div>
+     <script src="script.js"></script>
 </body>
 </html>
