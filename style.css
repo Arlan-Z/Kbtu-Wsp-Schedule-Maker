@@ -72,7 +72,7 @@ body{
     height: auto;
     width: auto;
 
-    margin: 0 0 2.5vh;
+    margin: 0 5vh 2.5vh;
 
     display: flex;
     align-items: center;
@@ -89,8 +89,6 @@ html {
 table {
     width: 210vh;
     height: 100%;
-
-    margin-right: 12.5vh;
     
     table-layout: fixed; 
     border-collapse: collapse;
@@ -99,7 +97,7 @@ table {
     font-size: 0.8rem;
 }
 
-td, th {
+td, th{
     word-wrap: break-word; /* Перенос слов на следующую строку */
     word-break: break-word; /* Перенос длинных слов */
     white-space: normal; /* Разрешить переносы строк */
@@ -144,6 +142,11 @@ td .box:hover{
     border: none;
 }
 
+td.time{
+    
+    width: 30px;
+}
+
 .time::before{
     content: "";
     position: absolute;
@@ -172,4 +175,5 @@ td .box:hover{
 .time.none::before{
     display: none;
 }
+
   /* Table Style */
