@@ -7,6 +7,8 @@ const table = document.getElementById("schedule");
 let data = {};
 let weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
+load();
+
 function createDis(){
     for(i = timeStart.value; i < timeEnd.value; i++){
         if (!data[i]) {
@@ -61,7 +63,6 @@ function updateTable(){
         }
     }
 
-    console.log(week.size);
     for(i = 1; i <= 7; i++){
         if(week.size == 0) break;
 
@@ -77,4 +78,35 @@ function updateTable(){
             });
         }
     }
+}
+
+function save() {
+    if (data) {
+        localStorage.setItem('tableData', JSON.stringify(data));
+    }
+}
+
+function load() {
+    let dataBuf = localStorage.getItem('tableData');
+    if (dataBuf) {
+        data = JSON.parse(dataBuf); // Преобразование строки обратно в объект
+        updateTable();
+    }
+}
+
+function deleteTable(){
+    data = {};
+    localStorage.removeItem('tableData');
+    location.reload()
+}
+
+function printDiv(divName) {
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+
+    window.print();
+
+    document.body.innerHTML = originalContents;
 }

@@ -144,7 +144,6 @@ td .box:hover{
 }
 
 td.time{
-    
     width: 5%;
 }
 
@@ -178,3 +177,55 @@ td.time{
 }
 
   /* Table Style */
+
+header{
+    background: rgb(210, 206, 206);
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1px 5px;
+}
+
+header .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+header .box .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+
+header .box .button:hover{
+    border: 1px solid gray;
+}
+
+header .box .button:active{
+    box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.169);
+}
+
+#delete{
+    font-size: 19px;
+    color: rgb(203, 80, 80);
+}
+
+#save{
+    color: rgb(35, 34, 34);
+}
+
+#download{
+    color: rgb(38, 42, 38);
+}
