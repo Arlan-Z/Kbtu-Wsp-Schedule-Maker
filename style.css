@@ -138,13 +138,14 @@ td .box:hover{
 }
 
 .time{
+    /* background: red; */
     position: relative;
     border: none;
 }
 
 td.time{
     
-    width: 30px;
+    width: 5%;
 }
 
 .time::before{
