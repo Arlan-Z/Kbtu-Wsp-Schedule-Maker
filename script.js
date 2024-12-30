@@ -10,11 +10,33 @@ let weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 load();
 
 function createDis(){
-    for(i = timeStart.value; i < timeEnd.value; i++){
+    const startTime = parseInt(timeStart.value);
+    const endTime = parseInt(timeEnd.value);
+    const dayValue = parseInt(day.value);  
+
+    if (endTime <= startTime) {
+        alert("End time must be later than start time.");
+        return;
+    }
+
+    for (let i = startTime; i < endTime; i++) {
+        const row = table.rows[i]; 
+
         if (!data[i]) {
-            data[i] = {}; 
+            data[i] = {};
         }
-        data[i][day.value] = nameInput.value;
+
+        if (data[i][dayValue]) {
+            alert("Time slot is already occupied!");
+            return;
+        }
+
+        data[i][dayValue] = nameInput.value;
+
+
+        if (i === startTime) {  
+            let numRowsToSpan = endTime - startTime;
+        }
     }
 
     updateTable();
